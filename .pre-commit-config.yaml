@@ -1,11 +1,12 @@
 repos:
   - repo: https://github.com/commitizen-tools/commitizen
-    rev: v2.35.0
+    rev: v4.19.1
     hooks:
       - id: commitizen
         stages: [commit-msg]
-  - repo: https://github.com/psf/black
-    rev: 22.10.0
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.16.10
     hooks:
-      - id: black
+      - id: ruff-format
+        args: [--target-version, py37]
         files: src/python/hmd_ms_hospital/
